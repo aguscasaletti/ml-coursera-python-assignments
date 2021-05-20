@@ -158,7 +158,9 @@ def checkNNGradients(nnCostFunction, lambda_=0):
     numgrad = computeNumericalGradient(costFunc, nn_params)
 
     # Visually examine the two gradient computations.The two columns you get should be very similar.
-    print(np.stack([numgrad, grad], axis=1))
+    print('numgrad shape', numgrad.shape)
+    print('grad shape', grad.shape)
+    # print(np.stack([numgrad, grad], axis=1))
     print('The above two columns you get should be very similar.')
     print('(Left-Your Numerical Gradient, Right-Analytical Gradient)\n')
 
