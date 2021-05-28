@@ -67,11 +67,13 @@ def featureNormalize(X):
     sigma : array_like
         A vector of size n corresponding to the standard deviations for each dimension across
         all examples.
-    """
+    """    
     mu = np.mean(X, axis=0)
+
     X_norm = X - mu
 
     sigma = np.std(X_norm, axis=0, ddof=1)
+    
     X_norm /= sigma
     return X_norm, mu, sigma
 
